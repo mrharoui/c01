@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrharoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 15:33:20 by mrharoui          #+#    #+#             */
-/*   Updated: 2024/10/23 15:33:48 by mrharoui         ###   ########.fr       */
+/*   Created: 2024/10/21 13:30:18 by mrharoui          #+#    #+#             */
+/*   Updated: 2024/10/23 15:36:02 by mrharoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 
 /*int main()
 {
-    int a = 8;
-    int b = 3;
-    int div[] = {0};
-    int mod[] = {0};
-    
-    
-    printf("before:\ndiv:%d\nmod:%d\n", *div, *mod);
-    ft_div_mod(a, b, div, mod);
-    printf("after:\ndiv: %d\n mod: %d\n", *div, *mod);  
+	ft_putstr("tiket");
 }*/
